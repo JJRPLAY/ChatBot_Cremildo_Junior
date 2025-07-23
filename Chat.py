@@ -14,21 +14,12 @@ def obter_resposta(texto: str) -> str:
                 return resposta
         elif chave in comando:
             return resposta
-
-    if comando in ('olá', 'boa tarde', 'bom dia'):
-        return 'Olá tudo bem!'
-    
-    if comando == 'como estás':
-        return 'Estou bem, obrigado!'
-    
+        
     if comando == 'como te chamas?':
         return 'O meu nome é: Bot :)'
     
     if comando == 'tempo':
         return 'Está um dia de sol!'
-    
-    if comando in ('bye', 'adeus', 'tchau'):
-        return 'Gostei de falar contigo! Até breve...'
     
     if 'horas' in comando:
         return f'São: {datetime.now():%H:%M} horas'
