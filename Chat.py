@@ -21,20 +21,19 @@ def obter_resposta(texto: str) -> str:
 
     return f'Desculpa, não entendi a questão! {texto}'
 
-    # respostas = {
-    #     ('olá', 'boa tarde', 'bom dia'): 'Olá tudo bem!',
-    #     'como estás': 'Estou bem, obrigado!',
-    #     ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',
-    # }
+    respostas = {
+        ('olá', 'boa tarde', 'bom dia'): 'Olá tudo bem!',
+        'como estás': 'Estou bem, obrigado!',
+        ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',
+    }
 
-    # for chave, resposta in respostas.items():
-    #     if isinstance(chave, tuple):
-    #         if comando in chave:
-    #             return resposta
-    #     elif chave in comando:
-    #         return resposta
-
-    # return f'Desculpa, não entendi a questão! {texto}'
+    for chave, resposta in respostas.items():
+        if isinstance(chave, tuple):
+            if comando in chave:
+                return resposta
+        elif chave in comando:
+            return resposta
+    return f'Desculpa, não entendi a questão! {texto}'
 
 
 def chat() -> None:
