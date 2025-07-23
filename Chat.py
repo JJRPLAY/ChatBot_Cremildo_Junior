@@ -6,6 +6,10 @@ def obter_resposta(texto: str) -> str:
     respostas = {
         ('olá', 'boa tarde', 'bom dia'): 'Olá tudo bem!',
         'como estás': 'Estou bem, obrigado!',
+        ("curiosidades", "curiosidade"): 'Sabias que os polvos têm três corações?',
+        ('uma piada', 'faz-me rir'): 'Por que o livro de matemática se suicidou? Porque tinha muitos problemas!',
+        ("obrigado", "obrigada"): 'De nada! Estou aqui para ajudar.',
+        ('voce é um bot?', 'tu és um bot?'): 'Sim, sou um bot criado para conversar contigo.',
         ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',}
     
     for chave, resposta in respostas.items():
